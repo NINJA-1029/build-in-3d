@@ -57,6 +57,7 @@ a:focus-visible,button:focus-visible,canvas:focus-visible {outline:3px solid var
 .hero h1 em {display:inline-block;font-family:var(--serif);font-weight:400;font-size:1.2em;line-height:.91;letter-spacing:-.055em;color:var(--blue);margin-left:.023em}
 .hero-intro {max-width:22em;font-size:clamp(16px,1.3vw,21px);line-height:1.52;letter-spacing:-.028em;margin:clamp(20px,2.25vw,37px) 0 clamp(22px,2.1vw,38px);color:#484d56}
 .hero-actions {display:flex;align-items:center;gap:clamp(15px,2.1vw,35px)}
+.hero-actions > * {white-space:nowrap}
 .primary-action {display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:0 23px;min-height:48px;border-radius:30px;color:white;background:var(--blue);text-decoration:none;font-size:14px;letter-spacing:-.025em;font-weight:580;transition:background-color .2s,transform .2s}
 .primary-action svg {width:16px;height:16px}
 .primary-action:hover {background:#1736b5;transform:translateY(-2px)}
@@ -144,7 +145,8 @@ body:has(dialog[open]) {overflow:hidden}
 }
 @media(max-width:370px) {
   .hero-actions {gap:13px}
-  .brief-action {font-size:12px}
+  .hero-actions .primary-action {padding-inline:14px;gap:10px;font-size:12px}
+  .brief-action {font-size:12px;gap:6px}
 }
 @media(prefers-reduced-motion:reduce) {
   :root {scroll-behavior:auto}
